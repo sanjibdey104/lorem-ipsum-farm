@@ -1,0 +1,20 @@
+header {
+    width: 40%;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+
+    background-color: $background-light;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    
+    h2 {
+        font-size: 2rem;
+        color: $text-dark;
+        text-align: center;
+
+        .fa-leaf {
+            color: rgb(38, 116, 81);
+            font-size: 2.5rem;
+        }
+    }
+}

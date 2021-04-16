@@ -1,0 +1,47 @@
+@media screen and (max-width: 768px) {
+    
+    body {
+        .container {
+            padding: 2rem 0;
+            position: relative;
+    
+            header {
+                width: 70%;
+            }
+    
+            #toggle-dark-mode {
+                position: fixed;
+                top: unset;
+                right: 2.5rem;
+                bottom: 3rem;
+                font-size: 1.75rem;
+
+                &::after {
+                    font-size: 0.6rem;
+                }
+            }
+    
+            .user-input-form {
+                .buttons {
+                    flex-direction: row;
+                }
+            }
+        
+            .lorem-generator-block {
+                width: 100%;
+            
+                .user-input-form {
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                .lorem-harvest-block {
+                    .fa-tractor {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    
+}

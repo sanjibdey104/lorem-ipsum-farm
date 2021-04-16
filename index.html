@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lorem Ipsum Farm</title>
+
+    <script src="https://kit.fontawesome.com/991c226565.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h2>Lorem Ipsum Farm<i class="fas fa-leaf"></i></h2>
+        </header>
+
+        <i class="fas fa-adjust" id="toggle-dark-mode"></i>
+
+        <section class="lorem-generator-block">
+            <form class="user-input-form">
+                <label for="word-count-input">Looking for some lorem ipsum?</label>
+
+                <div class="user-input-options">
+                    <input type="number" name="output-count" id="output-count" placeholder="enter count...">
+
+                    <div class="output-preference">
+                        <div>
+                            <input type="radio" name="preference" id="word-count" checked>
+                            <label for="word-count">Words</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="preference" id="para-count">
+                            <label for="para-count">Paragraphs</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="buttons">
+                    <button type="submit" class="generator-btn">Generate</button>
+                    <button type="reset" class="reset-btn">Reset</button>
+                </div>
+            </form><hr>
+
+            <div class="lorem-harvest-block">
+                <p class="placeholder-msg">
+                    your harvest will be unloaded here ... 
+                    <i class="fas fa-tractor fa-2x"></i>
+                </p>
+                <!-- generated lorem ipsum text will be dynamically loaded here  -->
+            </div>
+        </section>
+
+    </div>
+    
+</body>
+</html>

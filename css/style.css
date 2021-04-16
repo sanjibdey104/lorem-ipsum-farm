@@ -1,0 +1,356 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.3;
+  background-color: #fff;
+  color: #000;
+}
+
+body .container {
+  max-width: 80%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .container #toggle-dark-mode {
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+body .container #toggle-dark-mode::after {
+  content: 'toggle display';
+  position: absolute;
+  top: -1rem;
+  left: 1.75rem;
+  width: 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+body .container .lorem-generator-block {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button, input {
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header {
+  width: 40%;
+  margin-bottom: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+header h2 {
+  font-size: 2rem;
+  color: #000;
+  text-align: center;
+}
+
+header h2 .fa-leaf {
+  color: #267451;
+  font-size: 2.5rem;
+}
+
+.user-input-form {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.user-input-form label {
+  max-width: 10rem;
+  font-weight: 500;
+}
+
+.user-input-form .user-input-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.user-input-form .user-input-options #output-count {
+  width: 7rem;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+}
+
+.user-input-form .user-input-options #output-count::-webkit-input-placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.user-input-form .user-input-options #output-count:-ms-input-placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.user-input-form .user-input-options #output-count::-ms-input-placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.user-input-form .user-input-options #output-count::placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.user-input-form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.user-input-form .buttons .generator-btn {
+  width: 5rem;
+  background-color: #e63946;
+}
+
+.user-input-form .buttons .reset-btn {
+  width: 5rem;
+  background-color: #118ab2;
+}
+
+.lorem-harvest-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lorem-harvest-block .placeholder-msg {
+  font-weight: 500;
+  border-left: 0.3rem solid #000;
+  padding-left: 1rem;
+}
+
+.lorem-harvest-block .placeholder-msg .fa-tractor.move {
+  -webkit-animation: moveAcross 1.5s linear;
+          animation: moveAcross 1.5s linear;
+}
+
+@-webkit-keyframes moveAcross {
+  0% {
+    -webkit-transform: translateX(-25rem);
+            transform: translateX(-25rem);
+  }
+  50% {
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveAcross {
+  0% {
+    -webkit-transform: translateX(-25rem);
+            transform: translateX(-25rem);
+  }
+  50% {
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.lorem-harvest-block .lorem-harvest {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.lorem-harvest-block .lorem-harvest .lorem-text {
+  padding-left: 1rem;
+  border-left: 0.3rem solid #000;
+  color: #000;
+  max-height: 10rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.lorem-harvest-block .lorem-harvest .copy-text-btn {
+  background-color: #118ab2;
+  position: relative;
+}
+
+.lorem-harvest-block .lorem-harvest .copy-text-btn.alert::after {
+  content: "text copied";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -5rem;
+  color: #000;
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 768px) {
+  body .container {
+    padding: 2rem 0;
+    position: relative;
+  }
+  body .container header {
+    width: 70%;
+  }
+  body .container #toggle-dark-mode {
+    position: fixed;
+    top: unset;
+    right: 2.5rem;
+    bottom: 3rem;
+    font-size: 1.75rem;
+  }
+  body .container #toggle-dark-mode::after {
+    font-size: 0.6rem;
+  }
+  body .container .user-input-form .buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .container .lorem-generator-block {
+    width: 100%;
+  }
+  body .container .lorem-generator-block .user-input-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container .lorem-generator-block .lorem-harvest-block .fa-tractor {
+    display: block;
+  }
+}
+
+body.dark-mode {
+  background-color: #212529;
+  color: #dee2e6;
+}
+
+body.dark-mode .lorem-generator-block .placeholder-msg {
+  font-weight: 500;
+  border-left: 0.3rem solid #fff;
+  padding-left: 1rem;
+}
+
+body.dark-mode .lorem-generator-block .lorem-harvest-block .lorem-text {
+  color: #dee2e6;
+  border-left: 0.3rem solid #fff;
+}
+
+body.dark-mode .lorem-generator-block .lorem-harvest-block .copy-text-btn {
+  background-color: #118ab2;
+  position: relative;
+}
+
+body.dark-mode .lorem-generator-block .lorem-harvest-block .copy-text-btn.alert::after {
+  color: #dee2e6;
+}
+/*# sourceMappingURL=style.css.map */

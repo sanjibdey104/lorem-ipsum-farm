@@ -1,0 +1,88 @@
+$background-light: #fff;
+$background-dark: #212529;
+$text-light: #dee2e6;
+$text-dark: #000;
+$border-light: #fff;
+$border-dark: #000;
+$btn-primary: #e63946;
+$btn-secondary: #118ab2; 
+$btn-green: #2a9d8f;
+
+$primary-font: 'Montserrat', sans-serif;
+
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,*::before,*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+    background-color: $background-light;
+    color: $text-dark;
+
+
+    .container {
+        max-width: 80%;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        position: relative;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        
+        #toggle-dark-mode {
+            position: absolute;
+            top: 2rem;
+            right: 5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+
+            &::after {
+                content: 'toggle display';
+                position: absolute;
+                top: -1rem;
+                left: 1.75rem;
+
+                width: 2rem;
+                font-size: 0.75rem;
+                font-weight: 500;
+                font-family: $primary-font;
+            }
+        }
+    
+        .lorem-generator-block {
+            width: 80%;
+            margin: 0 auto;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+button, input {
+    font-family: $primary-font;
+}
+
+button {
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}

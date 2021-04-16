@@ -1,0 +1,46 @@
+.user-input-form {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    label {
+        max-width: 10rem;
+        font-weight: 500;
+    }
+
+    .user-input-options {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        #output-count {
+            width: 7rem;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+    
+            &::placeholder {
+                font-size: 0.8rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        .generator-btn {
+            width: 5rem;
+            background-color: $btn-primary;
+        }
+
+        .reset-btn {
+            width: 5rem;
+            background-color: $btn-secondary
+        }
+    }
+}

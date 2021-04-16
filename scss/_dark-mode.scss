@@ -1,0 +1,28 @@
+body.dark-mode {
+    background-color: $background-dark;
+    color: $text-light;
+
+    .lorem-generator-block {
+        .placeholder-msg {
+            font-weight: 500;
+            border-left: 0.3rem solid $border-light;
+            padding-left: 1rem;
+        }
+        .lorem-harvest-block {
+            .lorem-text {
+                color: $text-light;
+                border-left: 0.3rem solid $border-light;
+            }
+            .copy-text-btn {
+                background-color: $btn-secondary;
+                position: relative;
+    
+                &.alert {
+                    &::after {    
+                        color: $text-light;
+                    }
+                }
+            }
+        }
+    }
+}
