@@ -1,2 +1,2 @@
-# lorem-ipsum-farm
-Your handy lorem ipsum generator 
+# Lorem Ipsum Farm
+## -Your handy lorem ipsum generator 
