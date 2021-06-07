@@ -6,7 +6,6 @@ $border-light: #fff;
 $border-dark: #000;
 $btn-primary: #e63947;
 $btn-secondary: #118ab2; 
-$btn-green: #2a9d8f;
 $base-white: #fff;
 $outset-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 $primary-font: 'Montserrat', serif;
@@ -39,6 +38,7 @@ body {
         margin: 0 auto;
         padding: 1rem 0;
         position: relative;
+        overflow: hidden;
     
         display: flex;
         flex-direction: column;

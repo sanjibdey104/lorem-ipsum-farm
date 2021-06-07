@@ -4,6 +4,7 @@ const outputCount = document.querySelector('#output-count');
 const generatorBtn = document.querySelector('.generator-btn');
 const resetBtn = document.querySelector('.reset-btn');
 const preference = document.querySelectorAll('input[type="radio"]');
+const loremTypeMenu = document.querySelector('#lorem-type-menu');
 
 // Fetching required element references for displaying output
 const loremHarvestBlock = document.querySelector('.lorem-harvest-block');
@@ -11,16 +12,45 @@ const placeholderMsg = document.querySelector('.placeholder-msg');
 const tractorIcon = document.querySelector('.fa-tractor');
 const toggleDarkMode = document.querySelector('#toggle-dark-mode');
 
+const loremStock = [
+    {
+        loremType: "lorem",
+        string: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eveniet dignissimos odio placeat repudiandae sapiente officiis perspiciatis veritatis aperiam facere necessitatibus, accusamus nemo enim ullam consequuntur beatae minima iste expedita! Saepe distinctio soluta hic facere nam animi error quisquam neque porro officiis. Omnis asperiores maiores blanditiis voluptate quaerat natus velit."
+    },
+    {
+        loremType: "hipster",
+        string: "Tousled taiyaki craft beer, leggings mixtape enamel pin thundercats. Leggings humblebrag neutra sustainable, tbh hexagon edison bulb synth skateboard austin meggings cliche. Fingerstache wolf squid, hoodie organic farm-to-table tousled meditation pour-over art party mlkshk asymmetrical. Kogi hella deep next level YOLO disrupt ethical echo park fashion axe synth af mixtape."
+    },
+    {
+        loremType: "zombie",
+        string: "Zombie ipsum reversus ab viral inferno, nam grimes malum cerebro. De lumbering animata corpora quaeritis. Summus brains​​, vel maleficia? De apocalypsi omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat terribilem incessu zomby."
+    },
+    {
+        loremType: "bacon",
+        string: "Bacon ipsum dolor amet chicken tail andouille. Ribeye pork chop jowl sirloin sausage, meatball brisket venison beef ribs boudin tenderloin. Boudin frankfurter fatback, short ribs biltong jowl andouille ribs picanha chuck leberkas meatball pastrami porchetta ground round.Ham hock drumstick alcatra, pastrami beef ribs corned beef rump tenderloin strip steak burgdoggen."
+    }
+
+];
+
 // our stock lorem ipsum string
-const stockLoremString = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eveniet dignissimos odio placeat repudiandae sapiente officiis perspiciatis veritatis aperiam facere necessitatibus, accusamus nemo enim ullam consequuntur beatae minima iste expedita! Saepe distinctio soluta hic facere nam animi error quisquam neque porro officiis. Omnis asperiores maiores blanditiis voluptate quaerat natus velit."
+// const stockLoremString = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eveniet dignissimos odio placeat repudiandae sapiente officiis perspiciatis veritatis aperiam facere necessitatibus, accusamus nemo enim ullam consequuntur beatae minima iste expedita! Saepe distinctio soluta hic facere nam animi error quisquam neque porro officiis. Omnis asperiores maiores blanditiis voluptate quaerat natus velit."
 
 // coverting the string to an array, so we can easily run the word count as per user request
-const loremArr = stockLoremString.split(' ');
-
+// const loremArr = stockLoremString.split(' ');
 
 // Reading the user request
 userInputForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
+
+    // check the lorem preference
+    loremStock.forEach(item => {
+        if(item.loremType === loremTypeMenu.value) {
+            setLoremArr(item.string);
+        }
+    })
+
+
     const count = Number(outputCount.value);
 
     // to make sure user has supplied "count" value
@@ -44,6 +74,10 @@ userInputForm.addEventListener('submit', (e) => {
 })
 
 
+let loremArr = [];
+const setLoremArr = (loremString) => {
+    loremArr = loremString.split(' ');
+}
 
 
 // Generating words as per user request 
@@ -82,7 +116,7 @@ function generateWords(count) {
 
 // Generating paragraphs as per user request
 function generateParas(count) {
-    let bulkParas = loremArr.join(' ').concat('<br>').repeat(count);  
+    let bulkParas = loremArr.join(' ').concat('<br><br>').repeat(count);  
     // concat('<br>') adds a line break to each paragraph
     unloadHarvest(bulkParas);
 }

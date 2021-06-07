@@ -27,6 +27,7 @@ body .container {
   margin: 0 auto;
   padding: 1rem 0;
   position: relative;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,32 +439,26 @@ header img {
   }
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #dee2e6;
-}
-
-body.dark-mode header h2 {
-  color: #dee2e6;
-}
-
-body.dark-mode .lorem-generator-block .placeholder-msg {
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.75rem;
   font-weight: 500;
-  border-left: 0.3rem solid #fff;
-  padding-left: 1rem;
+  text-align: center;
+  color: #6b6b6b;
+  -webkit-transform: rotate(-45deg) translateX(15%) translateY(-10%);
+          transform: rotate(-45deg) translateX(15%) translateY(-10%);
 }
 
-body.dark-mode .lorem-generator-block .lorem-harvest-block .lorem-text {
-  color: #dee2e6;
-  border-left: 0.3rem solid #fff;
+footer a {
+  color: #e63947;
+  display: block;
+  color: #000;
+  font-weight: 600;
 }
 
-body.dark-mode .lorem-generator-block .lorem-harvest-block .copy-text-btn {
-  background-color: #118ab2;
-  position: relative;
-}
-
-body.dark-mode .lorem-generator-block .lorem-harvest-block .copy-text-btn.alert::after {
-  color: #dee2e6;
+footer a:hover {
+  color: tomato;
 }
 /*# sourceMappingURL=style.css.map */
