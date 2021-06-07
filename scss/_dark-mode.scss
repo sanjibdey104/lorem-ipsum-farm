@@ -2,6 +2,10 @@ body.dark-mode {
     background-color: $background-dark;
     color: $text-light;
 
+    header h2{
+        color: $text-light;
+    }
+
     .lorem-generator-block {
         .placeholder-msg {
             font-weight: 500;

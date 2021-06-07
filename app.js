@@ -138,46 +138,7 @@ resetBtn.addEventListener('click', (e)  => {
 })
 
 
-
-
-
 // little tractor icon animation
 window.addEventListener('DOMContentLoaded', () => {
     tractorIcon.classList.add('move');
-})
-
-
-// toggle dark mode (using local storage to save user theme preference)
-
-let isDarkMode = localStorage.getItem("dark-mode");
-
-const enableDarkMode = () => {
-    document.body.classList.add("dark-mode");
-    localStorage.setItem("dark-mode", "enabled");
-}
-
-const disableDarkMode = () => {
-    document.body.classList.remove("dark-mode");
-    localStorage.setItem("dark-mode", "disabled");
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-    let darkModeStatus = localStorage.getItem("dark-mode");
-    if (darkModeStatus === "enabled") {
-        enableDarkMode();
-    }
-    else {
-        disableDarkMode();
-    }
-})
-
-
-toggleDarkMode.addEventListener('click', (e) => {
-    let darkMode = localStorage.getItem("dark-mode");
-    if(darkMode === "disabled") {
-        enableDarkMode();
-    }
-    else {
-        disableDarkMode();
-    }
 })

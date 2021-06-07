@@ -14,18 +14,22 @@ html {
 body {
   width: 100%;
   height: 100vh;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Code Pro", monospace;
+  font-family: 'Inconsolata', monospace;
   line-height: 1.3;
   background-color: #fff;
   color: #000;
+  overflow: hidden;
 }
 
 body .container {
-  max-width: 80%;
+  width: 100%;
   min-height: 100%;
   margin: 0 auto;
   padding: 1rem 0;
   position: relative;
+  overflow: hidden;
+  border: 1px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,27 +42,8 @@ body .container {
           align-items: center;
 }
 
-body .container #toggle-dark-mode {
-  position: absolute;
-  top: 2rem;
-  right: 5rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-body .container #toggle-dark-mode::after {
-  content: 'toggle display';
-  position: absolute;
-  top: -1rem;
-  left: 1.75rem;
-  width: 2rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-}
-
 button, input, select {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Code Pro", monospace;
 }
 
 input, select {
@@ -69,6 +54,10 @@ input, select {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+img {
+  display: block;
 }
 
 button {
@@ -82,6 +71,26 @@ button {
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.crop {
+  height: 350px;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(10deg) translateX(5%) translateY(15%);
+          transform: rotate(10deg) translateX(5%) translateY(15%);
+}
+
+.sheep {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateX(-10%) translateY(10%);
+          transform: translateX(-10%) translateY(10%);
+}
+
 header {
   width: 40%;
   margin-bottom: 4rem;
@@ -91,11 +100,11 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #fff;
+  font-family: "Amatic SC", cursive;
 }
 
 header h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #000;
   text-align: center;
 }
@@ -106,8 +115,8 @@ header h2 .fa-leaf {
 }
 
 .sidebar {
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: 5rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -148,17 +157,23 @@ header h2 .fa-leaf {
 .sidebar .fab::after {
   content: attr(data-tooltip);
   height: 2rem;
-  width: 4rem;
+  width: 6rem;
   margin-left: 0.5rem;
   font-size: 0.8rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Code Pro", monospace;
   background-color: inherit;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   border-radius: 0.5rem;
   position: absolute;
-  right: -4rem;
+  left: 0;
   z-index: -1;
   -webkit-transform-origin: left;
           transform-origin: left;
@@ -233,7 +248,15 @@ header h2 .fa-leaf {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .user-input-form #output-count {
@@ -261,7 +284,7 @@ header h2 .fa-leaf {
 
 .user-input-form #lorem-type {
   width: 10rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -275,18 +298,25 @@ header h2 .fa-leaf {
   gap: 2rem;
 }
 
-.user-input-form .buttons .generator-btn {
+.user-input-form .buttons button:hover {
+  opacity: 0.5;
+}
+
+.user-input-form .buttons button {
   width: 5rem;
+}
+
+.user-input-form .buttons .generator-btn {
   background-color: #e63946;
 }
 
 .user-input-form .buttons .reset-btn {
-  width: 5rem;
   background-color: #118ab2;
 }
 
 .lorem-harvest-block {
-  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -421,7 +451,11 @@ header h2 .fa-leaf {
 }
 
 body.dark-mode {
-  background-color: #212529;
+  background-color: #121212;
+  color: #dee2e6;
+}
+
+body.dark-mode header h2 {
   color: #dee2e6;
 }
 

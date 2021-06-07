@@ -3,11 +3,10 @@ header {
     margin-bottom: 4rem;
     display: flex;
     justify-content: center;
-
-    background-color: $background-light;
+    font-family: $secondary-font;
     
     h2 {
-        font-size: 2rem;
+        font-size: 3rem;
         color: $text-dark;
         text-align: center;
 
