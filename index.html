@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Lorem Ipsum Farm</title>
 
@@ -21,20 +22,17 @@
 
         <i class="fas fa-adjust" id="toggle-dark-mode"></i>
 
-        <section class="lorem-generator-block">
-            
-            <h3>Looking for some lorem ipsum?</h3>
-            
+        <main class="lorem-generator-block">
             <form class="user-input-form">
                 <input type="number" name="output-count" id="output-count" placeholder="enter count...">
-
                     
                 <div class="output-preference">
                     <select name="lorem-type" id="lorem-type">
+                        <option disabled selected>crop type</option>
                         <option value="lorem">Lorem Ipsum</option>
-                        <option value="bacon">Bacon Ipsum</option>
+                        <option value="hipster">Hipster Ipsum</option>
                         <option value="zombie">Zombie Ipsum</option>
-                        <option value="hippie">Hippie Ipsum</option>
+                        <option value="bacon">Bacon Ipsum</option>
                     </select>
 
                     <section>
@@ -61,6 +59,18 @@
                 </p>
                 <!-- generated lorem ipsum will be dynamically loaded here  -->
             </div>
+        </main>
+
+        <section class="sidebar">
+            <a href="https://twitter.com/Sanjib_104" target="_blank">
+                <i class="fab fa-twitter twitter" data-tooltip="twitter"></i>
+            </a>
+            <a href="https://github.com/sanjibdey104/lorem-ipsum-farm" target="_blank">
+                <i class="fab fa-github github" data-tooltip="github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/" target="_blank">
+                <i class="fab fa-linkedin-in linkedin" data-tooltip="linkedin"></i>
+            </a>
         </section>
 
     </div>

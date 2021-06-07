@@ -1,5 +1,6 @@
 .user-input-form {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
     margin-bottom: 4rem;
@@ -9,23 +10,33 @@
         font-weight: 500;
     }
 
+    .output-preference {
+        display: flex;
+        gap: 2rem;
+    }
+
     #output-count {
-        width: 7rem;
+        width: 10rem;
         font-size: 1.1rem;
+        font-weight: 500;
         padding: 0.5rem 1rem;
 
         &::placeholder {
-            font-size: 0.8rem;
-            font-weight: 500;
+            font-size: 0.9rem;
         }
+    }
+
+    #lorem-type {
+        width: 10rem;
+        font-size: 1rem;
+        font-weight: 500;
     }
 
     .buttons {
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
         align-items: center;
-        gap: 0.5rem;
+        gap: 2rem;
+
         .generator-btn {
             width: 5rem;
             background-color: $btn-primary;
