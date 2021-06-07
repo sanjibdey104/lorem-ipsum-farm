@@ -95,8 +95,8 @@ function generateWords(count) {
     // when count is a multiple of stock word count
     // eg. count = 100, then it is  (50 * 2)
     else if (extra === 0) {
-        let rep = count / loremArr.length;
-        let bulkString = loremArr.join(' ').repeat(rep);
+        let repetitionCount = count / loremArr.length;
+        let bulkString = loremArr.join(' ').repeat(repetitionCount);
         unloadHarvest(bulkString);     
     }
 
@@ -104,8 +104,8 @@ function generateWords(count) {
     // when count is greater than stock word count
     // eg. count = 128, then it is (100 + 28)
     else {
-        let rep = (count - extra) / loremArr.length;
-        let bulkString = loremArr.join(' ').repeat(rep);
+        let repetitionCount = (count - extra) / loremArr.length;
+        let bulkString = loremArr.join(' ').repeat(repetitionCount);
         let extraString = loremArr.slice(0,extra).join(' ');
         let finalString = bulkString.concat(extraString);
         unloadHarvest(finalString);
@@ -117,7 +117,7 @@ function generateWords(count) {
 // Generating paragraphs as per user request
 function generateParas(count) {
     let bulkParas = loremArr.join(' ').concat('<br><br>').repeat(count);  
-    // concat('<br>') adds a line break to each paragraph
+    // concat('<br><br>') adds two line break to each paragraph
     unloadHarvest(bulkParas);
 }
 
