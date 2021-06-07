@@ -12,12 +12,11 @@
 * [Contact](#contact)
 
 ## General info
-A simple application for generating placeholder lorem ipsum text.
+A handy lorem ipsum placeholder generator.
 
 
 ## Technologies
 * Vanilla Javascript
-* HTML5
 * SASS
 
 
