@@ -111,7 +111,6 @@ header h2 .fa-leaf {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  height: 12rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -123,9 +122,6 @@ header h2 .fa-leaf {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   gap: 2rem;
 }
 
@@ -168,7 +164,7 @@ header h2 .fa-leaf {
           transform-origin: left;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  opacity: 0;
+  visibility: hidden;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
@@ -181,7 +177,7 @@ header h2 .fa-leaf {
   color: inherit;
   -webkit-transform: rotate(0);
           transform: rotate(0);
-  opacity: 1;
+  visibility: visible;
 }
 
 .sidebar .twitter:hover {
