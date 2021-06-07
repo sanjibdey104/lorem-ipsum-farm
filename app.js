@@ -11,7 +11,6 @@ const placeholderMsg = document.querySelector('.placeholder-msg');
 const tractorIcon = document.querySelector('.fa-tractor');
 const toggleDarkMode = document.querySelector('#toggle-dark-mode');
 
-
 // our stock lorem ipsum string
 const stockLoremString = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eveniet dignissimos odio placeat repudiandae sapiente officiis perspiciatis veritatis aperiam facere necessitatibus, accusamus nemo enim ullam consequuntur beatae minima iste expedita! Saepe distinctio soluta hic facere nam animi error quisquam neque porro officiis. Omnis asperiores maiores blanditiis voluptate quaerat natus velit."
 

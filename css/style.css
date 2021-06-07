@@ -60,21 +60,6 @@ body .container #toggle-dark-mode::after {
   font-family: "Montserrat", sans-serif;
 }
 
-body .container .lorem-generator-block {
-  width: 80%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 button, input {
   font-family: "Montserrat", sans-serif;
 }
@@ -98,8 +83,6 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #fff;
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 header h2 {
@@ -113,10 +96,25 @@ header h2 .fa-leaf {
   font-size: 2.5rem;
 }
 
+.lorem-generator-block {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
 .user-input-form {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,38 +130,28 @@ header h2 .fa-leaf {
   font-weight: 500;
 }
 
-.user-input-form .user-input-options {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-}
-
-.user-input-form .user-input-options #output-count {
+.user-input-form #output-count {
   width: 7rem;
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
 }
 
-.user-input-form .user-input-options #output-count::-webkit-input-placeholder {
+.user-input-form #output-count::-webkit-input-placeholder {
   font-size: 0.8rem;
   font-weight: 500;
 }
 
-.user-input-form .user-input-options #output-count:-ms-input-placeholder {
+.user-input-form #output-count:-ms-input-placeholder {
   font-size: 0.8rem;
   font-weight: 500;
 }
 
-.user-input-form .user-input-options #output-count::-ms-input-placeholder {
+.user-input-form #output-count::-ms-input-placeholder {
   font-size: 0.8rem;
   font-weight: 500;
 }
 
-.user-input-form .user-input-options #output-count::placeholder {
+.user-input-form #output-count::placeholder {
   font-size: 0.8rem;
   font-weight: 500;
 }

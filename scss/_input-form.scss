@@ -1,5 +1,4 @@
 .user-input-form {
-    width: fit-content;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -10,20 +9,14 @@
         font-weight: 500;
     }
 
-    .user-input-options {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+    #output-count {
+        width: 7rem;
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
 
-        #output-count {
-            width: 7rem;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-    
-            &::placeholder {
-                font-size: 0.8rem;
-                font-weight: 500;
-            }
+        &::placeholder {
+            font-size: 0.8rem;
+            font-weight: 500;
         }
     }
 
