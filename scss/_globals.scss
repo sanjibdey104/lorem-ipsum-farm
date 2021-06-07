@@ -4,11 +4,12 @@ $text-light: #dee2e6;
 $text-dark: #000;
 $border-light: #fff;
 $border-dark: #000;
-$btn-primary: #e63946;
+$btn-primary: #e63947;
 $btn-secondary: #118ab2; 
 $btn-green: #2a9d8f;
 $base-white: #fff;
-$primary-font: 'Source Code Pro', monospace;
+$outset-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+$primary-font: 'Montserrat', serif;
 $secondary-font: 'Amatic SC', cursive;
 
 
@@ -27,11 +28,10 @@ body {
     width: 100%;
     height: 100vh;
     font-family: $primary-font;
-    font-family: 'Inconsolata', monospace;
     line-height: 1.3;
     background-color: $background-light;
     color: $text-dark;
-    overflow: hidden;
+    font-weight: 300;
     
     .container {
         width: 100%;
@@ -39,8 +39,6 @@ body {
         margin: 0 auto;
         padding: 1rem 0;
         position: relative;
-        overflow: hidden;
-        border: 1px solid black;
     
         display: flex;
         flex-direction: column;
@@ -50,11 +48,16 @@ body {
 
 button, input, select {
     font-family: $primary-font;
+    font-weight: 500;
+    font-size: 0.85rem;
 }
 
 input, select {
-    border: 1px solid black;
+    border: 0;
     border-radius: 0.5rem;
+    font-size: 0.9rem;
+    color: rgb(97, 97, 97);
+    font-weight: 500;
 }
 
 a {
@@ -71,25 +74,16 @@ button {
     padding: 0.5rem;
     border-radius: 0.5rem;
     color: $base-white;
-    font-weight: 600;
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    box-shadow: $outset-shadow;
 }
 
-.crop {
+.crops {
     height: 350px;
-    width: 200px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: rotate(10deg) translateX(5%) translateY(15%);
-}
-
-.sheep {
-    height: 300px;
-    width: 300px;
-    position: absolute;
+    width: 350px;
+    position: fixed;
     bottom: 0;
     left: 0;
-    transform: translateX(-10%) translateY(10%);
+
+    transform: rotate(20deg) translateX(-18%) translateY(25%);
 }

@@ -1,8 +1,8 @@
 .sidebar {
     position: fixed;
-    right: 5rem;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 0;
+    top: 0;
+    transform: translateX(-100%) translateY(-5%) rotate(-45deg);
 
     width: fit-content;
     padding: 0 0.5rem;
@@ -32,9 +32,10 @@
 
         &::after {
             content: attr(data-tooltip);
-            height: 2rem;
+            height: 2.1rem;
             width: 6rem;
             margin-left: 0.5rem;
+            padding-left: 0.5rem;
 
             font-size: 0.8rem;
             font-family: $primary-font;
@@ -42,17 +43,17 @@
 
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: flex-start;
             border-radius: 0.5rem;
 
             position: absolute;
-            left: 0;
+            right: 0;
             z-index: -1;
             
-            transform-origin: left;
-            transform: rotate(-90deg);  
+            transform-origin: right;
+            transform: scale(0);  
             visibility: hidden;        
-            transition: all 200ms ease-in-out;
+            transition: all 150ms ease-in-out;
         }
     }
 
@@ -61,7 +62,7 @@
 
         &::after {
             color: inherit;
-            transform: rotate(0);
+            transform: scale(1);
             visibility: visible;
         }
     }

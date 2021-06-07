@@ -7,30 +7,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Lorem Ipsum Farm</title>
     <script src="https://kit.fontawesome.com/991c226565.js" crossorigin="anonymous"></script>
     <script src="app.js" defer></script>
 </head>
 <body>
-    <img src="./images/crops.png" alt="crops" class="crop">
-    <img src="./images/sheep.png" alt="sheep" class="sheep">
 
+    
     <div class="container">
         <header>
-            <h2>Lorem Ipsum Farm<i class="fas fa-leaf"></i></h2>
+            <h2>Lorem Ipsum Farm</h2>
+            <img src="./images/field.svg" alt="field">
         </header>
+        
+        <img src="./images/crops.png" alt="crops" class="crops">
 
         <main class="lorem-generator-block">
             <form class="user-input-form">
                 <input type="number" name="output-count" id="output-count" placeholder="enter count...">
                     
                 <div class="output-preference">
-                    <select name="lorem-type" id="lorem-type">
-                        <option disabled selected>choose crop type</option>
+                    <select name="lorem-type" id="lorem-type-menu">
+                        <option value="placeholder" disabled selected>choose crop type</option>
                         <option value="lorem">Lorem Ipsum</option>
-                        <option value="hipster">Hipster Ipsum</option>
+                        <option value="hipster">Hipster Ipsum </option>
                         <option value="zombie">Zombie Ipsum</option>
                         <option value="bacon">Bacon Ipsum</option>
                     </select>

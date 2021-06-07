@@ -1,18 +1,16 @@
 header {
     width: 40%;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     display: flex;
     justify-content: center;
+    gap: 0.5rem;
     font-family: $secondary-font;
     
     h2 {
-        font-size: 3rem;
-        color: $text-dark;
-        text-align: center;
+        font-size: 2.85rem;
+    }
 
-        .fa-leaf {
-            color: rgb(38, 116, 81);
-            font-size: 2.5rem;
-        }
+    img {
+        width: 2.5rem;
     }
 }

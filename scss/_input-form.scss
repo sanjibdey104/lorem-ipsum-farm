@@ -3,12 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 4rem;
-
-    label {
-        max-width: 10rem;
-        font-weight: 500;
-    }
+    margin-bottom: 2rem;
 
     .output-preference {
         display: flex;
@@ -20,19 +15,20 @@
 
     #output-count {
         width: 10rem;
-        font-size: 1.1rem;
-        font-weight: 500;
         padding: 0.5rem 1rem;
+        box-shadow: $outset-shadow;
 
         &::placeholder {
+            // color: black;
             font-size: 0.9rem;
         }
     }
 
-    #lorem-type {
+    #lorem-type-menu {
         width: 10rem;
         font-size: 0.9rem;
-        font-weight: 500;
+        padding: 0.3rem;
+        box-shadow: $outset-shadow;
     }
 
     .buttons {
@@ -41,7 +37,7 @@
         gap: 2rem;
 
         button:hover {
-            opacity: 0.5;
+            opacity: 0.75;
         }
         
         button {
