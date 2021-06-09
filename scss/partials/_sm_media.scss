@@ -1,0 +1,26 @@
+@media screen and (max-width: 768px) {
+    
+    .lorem-generator-block {
+        width: 100%;
+    }
+
+    .crops {
+        width: 10rem;
+    }
+
+    .sidebar {
+        top: unset;
+        bottom: 1rem;
+        transform: rotate(0) translateX(0) translateY(0);
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+
+    footer {
+        transform: rotate(-45deg) translateX(20%) translateY(0%);
+    }
+    
+}

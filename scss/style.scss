@@ -1,8 +1,8 @@
-@import "globals";
-@import "header";
-@import "sidebar";
-@import "generator-block";
-@import "input-form";
-@import "harvest-block";
-@import "sm-media";
-@import "footer";
+@import "partials/globals";
+@import "partials/header";
+@import "partials/sidebar";
+@import "partials/generator-block";
+@import "partials/input-form";
+@import "partials/harvest-block";
+@import "partials/footer";
+@import "partials/sm_media";

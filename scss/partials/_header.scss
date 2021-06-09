@@ -1,9 +1,9 @@
 header {
-    width: 40%;
-    margin-bottom: 3rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 0.5rem;
+    margin-bottom: 3rem;
     font-family: $secondary-font;
     
     h2 {
@@ -12,9 +12,5 @@ header {
 
     img {
         width: clamp(1.85rem, 6vw, 2.75rem);
-    }
-
-    @media (max-width: 768px) {
-        width: 70%;
     }
 }

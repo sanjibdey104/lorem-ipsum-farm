@@ -81,29 +81,25 @@ button {
 
 .crops {
   width: clamp(18rem, 10vw, 20rem);
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   -webkit-transform: rotate(20deg) translateX(-18%) translateY(25%);
           transform: rotate(20deg) translateX(-18%) translateY(25%);
 }
 
-@media (max-width: 768px) {
-  .crops {
-    width: 12rem;
-  }
-}
-
 header {
-  width: 40%;
-  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.5rem;
+  margin-bottom: 3rem;
   font-family: "Amatic SC", cursive;
 }
 
@@ -115,14 +111,8 @@ header img {
   width: clamp(1.85rem, 6vw, 2.75rem);
 }
 
-@media (max-width: 768px) {
-  header {
-    width: 70%;
-  }
-}
-
 .sidebar {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   -webkit-transform: translateX(-100%) translateY(-5%) rotate(-45deg);
@@ -139,24 +129,6 @@ header img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    top: unset;
-    bottom: 1rem;
-    -webkit-transform: rotate(0) translateX(0) translateY(0);
-            transform: rotate(0) translateX(0) translateY(0);
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 1rem;
-    width: 100%;
-  }
 }
 
 .sidebar a {
@@ -210,11 +182,17 @@ header img {
   transition: all 150ms ease-in-out;
 }
 
-.sidebar .fab:hover {
+@media (max-width: 768px) {
+  .sidebar .fab::after {
+    display: none;
+  }
+}
+
+.sidebar .fab:hover, .sidebar .fa:focus {
   color: #fff;
 }
 
-.sidebar .fab:hover::after {
+.sidebar .fab:hover::after, .sidebar .fa:focus::after {
   color: inherit;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -248,12 +226,6 @@ header img {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
-}
-
-@media (max-width: 768px) {
-  .lorem-generator-block {
-    width: 100%;
-  }
 }
 
 .user-input-form {
@@ -408,7 +380,7 @@ header img {
   }
 }
 
-.lorem-harvest-block .lorem-harvest {
+.lorem-harvest {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -423,7 +395,7 @@ header img {
   gap: 2rem;
 }
 
-.lorem-harvest-block .lorem-harvest .lorem-text {
+.lorem-harvest .lorem-text {
   padding-left: 1rem;
   border-left: 0.3rem solid #000;
   color: #000;
@@ -432,12 +404,12 @@ header img {
   overflow-x: hidden;
 }
 
-.lorem-harvest-block .lorem-harvest .copy-text-btn {
+.lorem-harvest .copy-text-btn {
   background-color: #118ab2;
   position: relative;
 }
 
-.lorem-harvest-block .lorem-harvest .copy-text-btn.alert::after {
+.lorem-harvest .copy-text-btn.alert::after {
   content: "text copied";
   display: block;
   position: absolute;
@@ -451,7 +423,7 @@ footer {
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: clamp(0.65rem, 2vw, 0.75rem);
+  font-size: clamp(0.65rem, 2vw, 0.85rem);
   font-weight: 500;
   text-align: center;
   color: #6b6b6b;
@@ -468,5 +440,33 @@ footer a {
 
 footer a:hover {
   color: tomato;
+}
+
+@media screen and (max-width: 768px) {
+  .lorem-generator-block {
+    width: 100%;
+  }
+  .crops {
+    width: 10rem;
+  }
+  .sidebar {
+    top: unset;
+    bottom: 1rem;
+    -webkit-transform: rotate(0) translateX(0) translateY(0);
+            transform: rotate(0) translateX(0) translateY(0);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  footer {
+    -webkit-transform: rotate(-45deg) translateX(20%) translateY(0%);
+            transform: rotate(-45deg) translateX(20%) translateY(0%);
+  }
 }
 /*# sourceMappingURL=style.css.map */

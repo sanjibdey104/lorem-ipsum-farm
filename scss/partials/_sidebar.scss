@@ -1,18 +1,8 @@
 .sidebar {
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
     transform: translateX(-100%) translateY(-5%) rotate(-45deg);
-
-    @media (max-width: 768px) {
-        top: unset;
-        bottom: 1rem;
-        transform: rotate(0) translateX(0) translateY(0);
-        flex-direction: row;
-        justify-content: center;
-        gap: 1rem;
-        width: 100%;
-    }
 
     width: fit-content;
     padding: 0 0.5rem;
@@ -64,10 +54,15 @@
             transform: scale(0);  
             visibility: hidden;        
             transition: all 150ms ease-in-out;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
+
     }
 
-    .fab:hover {
+    .fab:hover, .fa:focus {
         color: $base-white;
 
         &::after {
