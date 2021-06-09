@@ -1,3 +1,8 @@
+// Set target blank attribute to all links on the pge
+const links = document.querySelectorAll('a');
+links.forEach(link => link.setAttribute('target', '_blank'));
+
+
 // Fetching required element references from "form" block
 const userInputForm = document.querySelector('.user-input-form');
 const outputCount = document.querySelector('#output-count');
