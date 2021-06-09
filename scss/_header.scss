@@ -7,10 +7,14 @@ header {
     font-family: $secondary-font;
     
     h2 {
-        font-size: 2.85rem;
+        font-size: clamp(2rem, 6vw, 2.75rem);
     }
 
     img {
-        width: 2.5rem;
+        width: clamp(1.85rem, 6vw, 2.75rem);
+    }
+
+    @media (max-width: 768px) {
+        width: 70%;
     }
 }

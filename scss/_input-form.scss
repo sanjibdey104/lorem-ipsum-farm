@@ -5,6 +5,13 @@
     gap: 2rem;
     margin-bottom: 2rem;
 
+    max-width: 80%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        margin-bottom: 4rem;
+    }
+
     .output-preference {
         display: flex;
         align-items: center;

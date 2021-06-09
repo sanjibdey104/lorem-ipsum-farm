@@ -54,6 +54,12 @@ input, select {
   font-weight: 500;
 }
 
+@media (max-width: 768px) {
+  select option {
+    font-size: 0.75rem;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -74,13 +80,18 @@ button {
 }
 
 .crops {
-  height: 350px;
-  width: 350px;
+  width: clamp(18rem, 10vw, 20rem);
   position: fixed;
   bottom: 0;
   left: 0;
   -webkit-transform: rotate(20deg) translateX(-18%) translateY(25%);
           transform: rotate(20deg) translateX(-18%) translateY(25%);
+}
+
+@media (max-width: 768px) {
+  .crops {
+    width: 12rem;
+  }
 }
 
 header {
@@ -97,11 +108,17 @@ header {
 }
 
 header h2 {
-  font-size: 2.85rem;
+  font-size: clamp(2rem, 6vw, 2.75rem);
 }
 
 header img {
-  width: 2.5rem;
+  width: clamp(1.85rem, 6vw, 2.75rem);
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 70%;
+  }
 }
 
 .sidebar {
@@ -122,6 +139,24 @@ header img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    top: unset;
+    bottom: 1rem;
+    -webkit-transform: rotate(0) translateX(0) translateY(0);
+            transform: rotate(0) translateX(0) translateY(0);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
 }
 
 .sidebar a {
@@ -215,6 +250,12 @@ header img {
   gap: 2rem;
 }
 
+@media (max-width: 768px) {
+  .lorem-generator-block {
+    width: 100%;
+  }
+}
+
 .user-input-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -228,6 +269,14 @@ header img {
           align-items: center;
   gap: 2rem;
   margin-bottom: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .user-input-form {
+    margin-bottom: 4rem;
+  }
 }
 
 .user-input-form .output-preference {
@@ -398,52 +447,11 @@ header img {
   font-size: 0.75rem;
 }
 
-@media screen and (max-width: 768px) {
-  body .container {
-    padding: 2rem 0;
-    position: relative;
-  }
-  body .container header {
-    width: 70%;
-  }
-  body .container #toggle-dark-mode {
-    position: fixed;
-    top: unset;
-    right: 2.5rem;
-    bottom: 3rem;
-    font-size: 1.75rem;
-  }
-  body .container #toggle-dark-mode::after {
-    font-size: 0.6rem;
-  }
-  body .container .user-input-form .buttons {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  body .container .lorem-generator-block {
-    width: 100%;
-  }
-  body .container .lorem-generator-block .user-input-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  body .container .lorem-generator-block .lorem-harvest-block .fa-tractor {
-    display: block;
-  }
-}
-
 footer {
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: 0.75rem;
+  font-size: clamp(0.65rem, 2vw, 0.75rem);
   font-weight: 500;
   text-align: center;
   color: #6b6b6b;

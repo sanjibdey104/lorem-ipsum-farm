@@ -4,6 +4,16 @@
     top: 0;
     transform: translateX(-100%) translateY(-5%) rotate(-45deg);
 
+    @media (max-width: 768px) {
+        top: unset;
+        bottom: 1rem;
+        transform: rotate(0) translateX(0) translateY(0);
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
     width: fit-content;
     padding: 0 0.5rem;
 
@@ -11,10 +21,10 @@
     flex-direction: column;
     gap: 2rem;
 
-     a {
-         border-radius: 50%;
-         pointer-events: none;
-     }
+    a {
+        border-radius: 50%;
+        pointer-events: none;
+    }
 
     .fab {
         padding: 0.5rem;
