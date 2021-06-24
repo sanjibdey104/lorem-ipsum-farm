@@ -1,47 +1,19 @@
 # Lorem Ipsum Farm
-> Your friendly lorem ipsum generator
+### A handy lorem ipsum placeholder generator
 
 ### live app link: https://sanjibdey104.github.io/lorem-ipsum-farm/
+<br/>
 
-### Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Features](#features)
-* [Status](#status)
-* [Attribution](#attribution)
-* [Contact](#contact)
+### Features
+* Generate lorem ipsum text as per word count or paragraph count:  *like "20 words" or "3 paragraphs"*
 
-## General info
-A handy lorem ipsum placeholder generator.
-
-
-## Technologies
+   with flavor options like: *Zombie Ipsum*, *Hipster Ipsum*, *Bacon Ipsum*
+  
+  
+### Tech Stack
 * Vanilla Javascript
 * SASS
 
 
-## Features
-* User can generate lorem ipsum text as per word count or paragraph count
-
-   *like "20 words" or "3 paragraphs"*
-
-
-### To-do list:
-* Add different lorem ipsum flavors like:  
- 
-   *Zombie Ipsum*, *Hipster Ipsum*, *Bacon Ipsum*
-
-
-## Status
-Project is live with above features and in-progress with the "to-do" scope
-
-
-## Attribution
+### Attribution
 * SVG icons made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com)
-
-## Contact
-Created by [@sanjib104](https://twitter.com/Sanjib_104) 
-
-Mail: sanjibdey.dey4@gmail.com 
-
-   *feel free to contact me!*
